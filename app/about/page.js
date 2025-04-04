@@ -49,7 +49,6 @@ export default function About() {
 									</div>
 									<div className="col-md-6">
 										<div className="about-box">
-											<img src="images/about/graphic-box.png" alt="image shape" />
 											{/* header style v1 */}
 											<div className="title-box title-small-v2">
 												<span className="sub-title wow fadeInUp animated">Welcome to runclub!</span>
@@ -64,13 +63,6 @@ export default function About() {
 											<div className="line" />
 											<div className="about-button-group">
 												<button className="flat-button wow fadeInUp animated">Find out more</button>
-												<div className="infor-about">
-													<img src="images/about/info.png" alt="" />
-													<div className="info">
-														<div className="name wow fadeInUp animated">Chris pad</div>
-														<div className="job wow fadeInUp animated">Co - Founder Zunzo</div>
-													</div>
-												</div>
 											</div>
 										</div>
 									</div>

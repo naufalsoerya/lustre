@@ -18,10 +18,10 @@ export default function Home() {
 			<Layout headerStyle={1} footerStyle={1} breadcrumbTitle="title">
 				<Slider1 />
 				<Partner />
-				<About1 />
-				<Benefit1 />
-				<Event1 />
 				<Course1 />
+				<Benefit1 />
+				{/* <About1 /> */}
+				{/* <Event1 /> */}
 				{/* <Testimonial1 />
 				<Team1 />
 				<Banner />

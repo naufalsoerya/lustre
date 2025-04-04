@@ -20,77 +20,7 @@ export default function Benefit1() {
 							<div className="about-button-group">
 							</div>
 						</div>{/* header style v2 */}
-						<div className="benefit-wrap-content">
-							<div className="row">
-								<div className="col-md-4 benefit-on-left">
-									<div className="benefit-item">
-										<div className="benefit-content">
-											<h6 className="title-benefit wow fadeInLeft animated">
-												Be healthy
-											</h6>
-											<p className="description-benefit wow fadeInLeft animated">
-												Improve your physical fitness and well-being through regular running.
-											</p>
-										</div>
-										<div className="benefit-number">
-											<span className="number wow zoomIn animated">01</span>
-										</div>
-									</div>
-									<div className="benefit-item">
-										<div className="benefit-content">
-											<h6 className="title-benefit wow fadeInLeft animated">
-												Feel Free
-											</h6>
-											<p className="description-benefit wow fadeInLeft animated">
-												Experience the freedom of running outdoors, and challenging yourself.
-											</p>
-										</div>
-										<div className="benefit-number">
-											<span className="number wow zoomIn animated">02</span>
-										</div>
-									</div>
-								</div>
-								<div className="col-md-4 benefit-center ">
-									<div className="benefit-video">
-										<img className="video" src="images/retinal/video.jpg" alt="" />
-										<a  onClick={() => setOpen(true)} className="popup-youtube">
-											<i className="icon-play3" />
-										</a>
-										<img className="shape-video-1" src="images/retinal/Inforgraphic.png" alt="" />
-										<img className="shape-video-2" src="images/retinal/Inforgraphic1.png" alt="" />
-										<img className="shape-video-3" src="images/retinal/Inforgraphic2.png" alt="" />
-										<img className="shape-video-4" src="images/retinal/Inforgraphic3.png" alt="" />
-									</div>
-								</div>
-								<div className="col-md-4 benefit-on-right">
-									<div className="benefit-item">
-										<div className="benefit-number">
-											<span className="number wow zoomIn animated">03</span>
-										</div>
-										<div className="benefit-content">
-											<h6 className="title-benefit wow fadeInRight animated">
-												Be one of us
-											</h6>
-											<p className="description-benefit wow fadeInRight animated">
-												Join a supportive community of like-minded runners and achieving goals together.
-											</p>
-										</div>
-									</div>
-									<div className="benefit-item">
-										<div className="benefit-number">
-											<span className="number wow zoomIn animated">04</span>
-										</div>
-										<div className="benefit-content">
-											<h6 className="title-benefit wow fadeInRight animated">
-												be strong</h6>
-											<p className="description-benefit wow fadeInRight animated">
-												Build resilience and mental toughness as you push your limits.
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</div>

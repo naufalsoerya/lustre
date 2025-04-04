@@ -38,9 +38,8 @@ export default function Menu() {
 				<li className={`${checkParentActive(["/blog", "/blog-single"])}`}>
 					<Link href="/#">Articles</Link>
 					<ul className="submenu">
-						<li className={`item ${checkCurrentMenuItem("/blog")}`}><Link href="/blog">Health</Link></li>
-						<li className={`item ${checkCurrentMenuItem("/blog-single")}`}><Link href="/blog-single">Running</Link></li>
-						<li className={`item ${checkCurrentMenuItem("/blog-single")}`}><Link href="/blog-single">wellness</Link></li>
+						<li className={`item ${checkCurrentMenuItem("/blog")}`}><Link href="/blog">Performance</Link></li>
+						<li className={`item ${checkCurrentMenuItem("/blog-single")}`}><Link href="/blog-single">Wellness</Link></li>
 					</ul>{/* /.submenu */}
 				</li>
 				<li className={`item ${pathname === "/about" ? "current-menu-item" : ""}`}><Link href="/about">About us</Link></li>
