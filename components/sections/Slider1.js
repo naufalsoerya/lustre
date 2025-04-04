@@ -21,7 +21,7 @@ export default function Slider1() {
 				<div className="tf-slider swiper-wrapper">
 					<SwiperSlide className="tf-banner swiper-slide">
 						<div className="image-slider">
-							<img src="images/slides/slide1.jpg" alt="image" />
+							<img src="images/slides/slide1.jpg" alt="image" style={{ width: '1470px', height: '858px' }}/>
 							<div className="overlay" />
 						</div>
 						<div className="themeflat-container">
@@ -38,7 +38,7 @@ export default function Slider1() {
 										<Link href="/contact" className="flat-button">Join our club</Link>
 									</div>
 								</div>
-								<div className="box-events-slide">
+								{/* <div className="box-events-slide">
 									<span className="new-event">new Event </span>
 									<img src="images/evtent/new-event.jpg" alt="image event" className="new-event" />
 									<div className="content-event">
@@ -71,7 +71,7 @@ export default function Slider1() {
 											</li>
 										</ul>
 									</div>
-								</div>
+								</div> */}
 							</div>
 						</div>
 					</SwiperSlide>

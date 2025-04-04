@@ -21,8 +21,8 @@ export default function Home() {
 				<About1 />
 				<Benefit1 />
 				<Event1 />
-				{/* <Course1 />
-				<Testimonial1 />
+				<Course1 />
+				{/* <Testimonial1 />
 				<Team1 />
 				<Banner />
 				<Blog />

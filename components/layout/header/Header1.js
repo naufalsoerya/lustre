@@ -15,7 +15,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isCart
 					<div className="header-inner">
 						<div id="logo" className="logo">
 							<Link href="/" rel="home">
-								<img id="a2" src="images/logo.png" alt="image" />
+								<img id="a2" src="images/logo.png" alt="image" style={{ width: '300px', height: '65px' }}/>
 							</Link>
 						</div>{/* /.logo */}
 						<div className="nav-wrap">

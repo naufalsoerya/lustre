@@ -14,8 +14,11 @@ export default function Benefit1() {
 					<div className="tf-benefit">
 						{/* header style v2 */}
 						<div className="title-box-v2 center-title-box title-large">
-							<span className="sub-title wow fadeInUp animated">running's benefits</span>
-							<h2 className="title-section wow fadeInUp animated">Benefits of running reference</h2>
+							<h2 className="title-section wow fadeInUp animated" style={{ marginBottom: '15px' }}>The Blueprints</h2>
+							<span className="sub-title wow fadeInUp animated">Guidance Along The Pursuit</span>
+							<button className="flat-button wow fadeInUp animated">Read More</button>
+							<div className="about-button-group">
+							</div>
 						</div>{/* header style v2 */}
 						<div className="benefit-wrap-content">
 							<div className="row">
