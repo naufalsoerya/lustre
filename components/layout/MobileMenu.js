@@ -29,13 +29,13 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
 				</div>
 				<ul className="menu">
 					<li className={`${checkParentActive(["/homev2", "/homev3"])}`}>
-						<Link href="/#">Home page</Link>
-						<span className="btn-submenu" onClick={() => handleAccordion(1)} />
+						<Link href="/">Home page</Link>
+						{/* <span className="btn-submenu" onClick={() => handleAccordion(1)} />
 						<ul className="submenu" style={{ display: `${isAccordion === 1 ? "block" : "none"}` }}>
 							<li className={`item ${checkCurrentMenuItem("/")}`}><Link href="/">Home V.1</Link></li>
 							<li className={`item ${checkCurrentMenuItem("/homev2")}`}><Link href="/homev2">Home V.2</Link></li>
 							<li className={`item ${checkCurrentMenuItem("/homev3")}`}><Link href="/homev3">Home V.3</Link></li>
-						</ul>{/* /.submenu */}
+						</ul> */}
 					</li>
 					<li className={`item ${pathname === "/about" ? "current-menu-item" : ""}`}><Link href="/about">About us</Link></li>
 					<li className={`${checkParentActive(["/event", "/event-details"])}`}>
