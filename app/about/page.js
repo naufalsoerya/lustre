@@ -55,6 +55,7 @@ export default function About() {
 												<span className="sub-title wow fadeInUp animated">Welcome to runclub!</span>
 												<h2 className="title-section wow fadeInUp animated">Zunzo - Your Ultimate Running Community
 												</h2>
+												
 											</div>{/* header style v1 */}
 											<p className="post wow fadeInUp animated">
 												Welcome to our vibrant running community, where we organize exciting running events,
