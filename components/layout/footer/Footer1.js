@@ -11,13 +11,13 @@ export default function Footer1() {
 							<div className="col-xxl-4 col-lg-4 col-xl-4 col-md-12 logo-footer">
 								<div className="widget">
 									<div className="textwidget">
-										<img id="a1" src="images/logo-footer.png" alt="images" />
+										<img id="a1" src="images/logo.png" alt="images" style={{ marginLeft: '-20px' }}/>
 										<p>Welcome to our running community! Discover the joy of running, connect with fellow
 											enthusiasts, and unlock your full potential with our expert resources and training
 											programs.
 										</p>
 										<div className="social-icon-footer">
-											<Link href="/facebook.com"><i className="icon-facebook" /></Link>
+											{/* <Link href="/facebook.com"><i className="icon-facebook" /></Link> */}
 											<Link href="/linkedin.com"><i className="icon-linkedin2" /></Link>
 											<Link href="/icon-twitter.com"><i className="icon-twitter" /></Link>
 											<Link href="/instagram.com"><i className="icon-instagram" /></Link>
@@ -43,8 +43,8 @@ export default function Footer1() {
 										<li><Link href="/event-details">Events Detail</Link></li>
 										<li><Link href="/event">Events</Link></li>
 										<li><Link href="/about">About Us</Link></li>
-									</ul>{/* /.menu */}
-								</div>{/* /.widget */}
+									</ul>
+								</div>
 							</div>{/* /.col-md-4 */}
 							<div className="col-xxl-4 col-lg-4 col-xl-4 col-md-6 new-letter">
 								<div className="widget widget_text">
@@ -58,10 +58,10 @@ export default function Footer1() {
 										</svg>
 										<div className="address">
 											<p>Need help? 24/7</p>
-											<span>001-1234-88888</span>
+											<span>(+62) 813-1623-5744</span>
 										</div>
 									</div>
-									<p><i className="icon-MapPin" />710 1st St. Easton, PA 18042 | Chester County</p>
+									<p><i className="icon-MapPin" />Jakarta, Indonesia</p>
 									<form action="#">
 										<div className="input-new-letter">
 											<input className="btn-email" name="email" id="emails" type="email" placeholder="Your email address" required />
@@ -74,7 +74,7 @@ export default function Footer1() {
 						<div className="row footer-bottom">
 							<div className="col-md-6 col-sm-12">
 								<div className="copyright">
-									<p>©2023 <Link href="/" target="_blank"> Zunzo.</Link> All Rights Reserved.
+									<p>©2025 <Link href="/" target="_blank"> Lustre Athletic.</Link> All Rights Reserved.
 									</p>
 								</div>
 							</div>{/* /.col-md-6 */}
