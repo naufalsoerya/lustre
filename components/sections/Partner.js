@@ -65,37 +65,37 @@ export default function Partner() {
 								<img className="image-logo" src="images/retinal/5.png" alt="image logo" />
 							</SwiperSlide>
 							<SwiperSlide>
-								<img className="image-logo" src="images/retinal/2.png" alt="image logo" />
-							</SwiperSlide>
-							<SwiperSlide>
-								<img className="image-logo" src="images/retinal/3.png" alt="image logo" />
-							</SwiperSlide>
-							<SwiperSlide>
-								<img className="image-logo" src="images/retinal/4.png" alt="image logo" />
-							</SwiperSlide>
-							<SwiperSlide>
-								<img className="image-logo" src="images/retinal/6.png" alt="image logo" />
-							</SwiperSlide>
-							<SwiperSlide>
-								<img className="image-logo" src="images/retinal/1.png" alt="image logo" />
+								<img className="image-logo" src="images/retinal/5.png" alt="image logo" />
 							</SwiperSlide>
 							<SwiperSlide>
 								<img className="image-logo" src="images/retinal/5.png" alt="image logo" />
 							</SwiperSlide>
 							<SwiperSlide>
-								<img className="image-logo" src="images/retinal/2.png" alt="image logo" />
+								<img className="image-logo" src="images/retinal/5.png" alt="image logo" />
 							</SwiperSlide>
 							<SwiperSlide>
-								<img className="image-logo" src="images/retinal/3.png" alt="image logo" />
+								<img className="image-logo" src="images/retinal/5.png" alt="image logo" />
 							</SwiperSlide>
 							<SwiperSlide>
-								<img className="image-logo" src="images/retinal/4.png" alt="image logo" />
+								<img className="image-logo" src="images/retinal/5.png" alt="image logo" />
 							</SwiperSlide>
 							<SwiperSlide>
-								<img className="image-logo" src="images/retinal/6.png" alt="image logo" />
+								<img className="image-logo" src="images/retinal/5.png" alt="image logo" />
 							</SwiperSlide>
 							<SwiperSlide>
-								<img className="image-logo" src="images/retinal/1.png" alt="image logo" />
+								<img className="image-logo" src="images/retinal/5.png" alt="image logo" />
+							</SwiperSlide>
+							<SwiperSlide>
+								<img className="image-logo" src="images/retinal/5.png" alt="image logo" />
+							</SwiperSlide>
+							<SwiperSlide>
+								<img className="image-logo" src="images/retinal/5.png" alt="image logo" />
+							</SwiperSlide>
+							<SwiperSlide>
+								<img className="image-logo" src="images/retinal/5.png" alt="image logo" />
+							</SwiperSlide>
+							<SwiperSlide>
+								<img className="image-logo" src="images/retinal/5.png" alt="image logo" />
 							</SwiperSlide>
 						</Swiper>
 					</div>
