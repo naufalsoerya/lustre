@@ -26,20 +26,20 @@ export default function Menu() {
 						<li className={`item ${checkCurrentMenuItem("/homev3")}`}><Link href="/homev3">Home V.3</Link></li>
 					</ul> */}
 				</li>
-				<li className={`${checkParentActive(["/event", "/event-details"])}`}>
+				<li className={`${checkParentActive(["/event-mens", "/event-womans", "/event-accessories", "/event-details"])}`}>
 					<Link href="/#">Shop</Link>
 					<ul className="submenu">
-						<li className={`item ${checkCurrentMenuItem("/event")}`}><Link href="/event">Mens</Link></li>
-						<li className={`item ${checkCurrentMenuItem("/event")}`}><Link href="/event">Womans</Link></li>
-						<li className={`item ${checkCurrentMenuItem("/event")}`}><Link href="/event">Accessories</Link></li>
+						<li className={`item ${checkCurrentMenuItem("/event-mens")}`}><Link href="/event-mens">Mens</Link></li>
+						<li className={`item ${checkCurrentMenuItem("/event-womans")}`}><Link href="/event-womans">Womans</Link></li>
+						<li className={`item ${checkCurrentMenuItem("/event-accessories")}`}><Link href="/event-accessories">Accessories</Link></li>
 						{/* <li className={`item ${checkCurrentMenuItem("/event-details")}`}><Link href="/event-details">Events Details</Link></li> */}
 					</ul>
 				</li>
-				<li className={`${checkParentActive(["/blog", "/blog-single"])}`}>
+				<li className={`${checkParentActive(["/blog-performance", "/blog-wellness", "/blog-single"])}`}>
 					<Link href="/#">Articles</Link>
 					<ul className="submenu">
-						<li className={`item ${checkCurrentMenuItem("/blog")}`}><Link href="/blog">Performance</Link></li>
-						<li className={`item ${checkCurrentMenuItem("/blog-single")}`}><Link href="/blog-single">Wellness</Link></li>
+						<li className={`item ${checkCurrentMenuItem("/blog-performance")}`}><Link href="/blog-performance">Performance</Link></li>
+						<li className={`item ${checkCurrentMenuItem("/blog-wellness")}`}><Link href="/blog-wellness">Wellness</Link></li>
 					</ul>{/* /.submenu */}
 				</li>
 				<li className={`item ${pathname === "/about" ? "current-menu-item" : ""}`}><Link href="/about">About us</Link></li>

@@ -18,7 +18,7 @@ export default function Course1() {
 								<div className="course-item-wrap wow fadeInUp animated">
 									<Link href="/blog-single" className="image-course">
 										{/* <span className="date-course">21 Oct</span> */}
-										<img src="images/retinal/tutorial1.jpg" alt="" style={{ width: '500px', height: '500px' }} />
+										<img src="images/retinal/tutorial1.jpg" alt="" style={{ width: '450px', height: '400px' }} />
 									</Link>
 									<div className="content-course" style={{ textAlign: 'center' }}>
 										<h5 className="title-course"><Link href="/blog-single">Running Tshirt</Link></h5>
@@ -31,7 +31,7 @@ export default function Course1() {
 								<div className="course-item-wrap wow fadeInUp animated">
 									<Link href="/blog-single" className="image-course">
 										{/* <span className="date-course">21 Oct</span> */}
-										<img src="images/retinal/tutorial2.jpg" alt="" style={{ width: '500px', height: '500px' }}/>
+										<img src="images/retinal/tutorial2.jpg" alt="" style={{ width: '450px', height: '400px' }}/>
 									</Link>
 									<div className="content-course" style={{ textAlign: 'center' }}>
 										<h5 className="title-course"><Link href="/blog-single">Half Tights</Link></h5>
@@ -44,7 +44,7 @@ export default function Course1() {
 								<div className="course-item-wrap wow fadeInUp animated">
 									<Link href="/blog-single" className="image-course">
 										{/* <span className="date-course">21 Oct</span> */}
-										<img src="images/retinal/tutorial3.jpg" alt="" style={{ width: '500px', height: '500px' }}/>
+										<img src="images/retinal/tutorial3.jpg" alt="" style={{ width: '450px', height: '400px' }}/>
 									</Link>
 									<div className="content-course" style={{ textAlign: 'center' }}>
 										<h5 className="title-course"><Link href="/blog-single">Performance Socks</Link></h5>

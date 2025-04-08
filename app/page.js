@@ -22,11 +22,11 @@ export default function Home() {
 				<Benefit1 />
 				{/* <About1 /> */}
 				{/* <Event1 /> */}
-				{/* <Testimonial1 />
-				<Team1 />
-				<Banner />
+				{/* <Testimonial1 /> */}
+				{/* <Team1 /> */}
+				{/* <Banner />
 				<Blog />
-				<Form1 /> */}
+				<Form1 />  */}
 				<div className="graphic" />
 
 			</Layout>
