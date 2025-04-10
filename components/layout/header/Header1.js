@@ -56,12 +56,12 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isCart
 												<img src="images/retinal/fire.png" alt="" />
 												<CartExpirationTimer />
 											</div>
-											<div className="tf-progessbar ">
+											{/* <div className="tf-progessbar ">
 												<div className="tf-notice">Buy <span>$70.00</span> more to get
 													<span>Freeship</span>
 												</div>
 												<div className="tf-progressbar-content"><span className="tf-amount" /></div>
-											</div>
+											</div> */}
 											<ul className="cart_list">
 												<li className="mini_cart_item">
 													<div className="image">

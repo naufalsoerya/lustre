@@ -13,13 +13,13 @@ export default function EventDetails() {
 							<div className="row">
 								<div className="col-md-12">
 									<div className="page-title-heading">
-										<h1 className="title">Event Detail</h1>
+										<h1 className="title">Product Detail</h1>
 									</div>{/* /.page-title-captions */}
 									<div className="breadcrumbs">
 										<ul>
-											<li><Link href="/">Homepage</Link></li>
+											<li><Link href="/">Shop</Link></li>
 											<li> <i className="icon-Arrow---Right-2" /></li>
-											<li><a>Event Detail</a></li>
+											<li><a>Event Details</a></li>
 										</ul>
 									</div>{/* /.breadcrumbs */}
 								</div>{/* /.col-md-12 */}
@@ -150,74 +150,6 @@ export default function EventDetails() {
 							</div>
 						</div>
 					</div>{/*Event Detail Content */}
-					{/* Widget form conatct*/}
-					<div className="tf-widget-form-contact form-contact-v2">
-						<div className="themeflat-container">
-							<div className="tf-form-contact">
-								<div className="row">
-									<div className="col-md-6 pd-form">
-										<div className="map-contact relative">
-											<div id="map" />
-										</div>
-									</div>
-									<div className="col-md-6 pd-form">
-										<div className="form-contact background-black">
-											<div className="heading-register">
-												<h2 className="title-register">Contact Us</h2>
-											</div>
-											<div className="list-contact">
-												<div className="contact">
-													<span> Phone: </span>
-													<div className="address">(555) 123-4567</div>
-												</div>
-												<div className="contact">
-													<span> Email: </span>
-													<div className="address">hello@zunzo.com</div>
-												</div>
-											</div>
-											<ul className="social-media">
-												<li>
-													<Link href="/twitter.com"><i className="icon-twitter" /></Link>
-												</li>
-												<li>
-													<Link href="/dribbble.com"><i className="icon-dribbble" /></Link>
-												</li>
-												<li>
-													<Link href="/behance.com"><i className="icon-behance" /></Link>
-												</li>
-												<li>
-													<Link href="/pinterest.com"><i className="icon-pinterest" /></Link>
-												</li>
-											</ul>
-											<div className="form-register">
-												<form action="#" method="post" id="registerform" className="register-form" noValidate>
-													<fieldset className="name-container">
-														<input type="text" id="author" placeholder="Your name*" className="tb-my-input" name="author" tabIndex={1} size={32} aria-required="true" />
-													</fieldset>
-													<fieldset className="email-container">
-														<input type="text" id="email" placeholder="Your email*" className="tb-my-input" name="email" tabIndex={2} size={32} aria-required="true" />
-													</fieldset>
-													<fieldset className="telephone-container">
-														<input type="text" id="telephone" placeholder="Telephone*" className="tb-my-input" name="telephone" tabIndex={1} size={32} aria-required="true" />
-													</fieldset>
-													<fieldset className="sex-container">
-														<select name="sex" id="sexs" className="tb-my-input" aria-required="true">
-															<option value>Male</option>
-															<option value="female">Female</option>
-														</select>
-													</fieldset>
-													<p className="form-submit">
-														<input name="submit" type="submit" id="comment-reply" className="submit-register" defaultValue="Join now" />
-													</p>
-												</form>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="graphic-form background-green" />
 				</div>
 
 			</Layout>
