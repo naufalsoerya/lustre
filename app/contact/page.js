@@ -24,9 +24,9 @@ export default function Contact() {
 										<div className="content-page-title">
 											<span className="wow fadeInUp animated">Contact us</span>
 											<h2 className="wow fadeInUp animated">Get in touch</h2>
-											<p className="post wow fadeInUp animated">In the 14 years since she first graced our screens in
+											{/* <p className="post wow fadeInUp animated">In the 14 years since she first graced our screens in
 												Keeping Up With The
-												Kardashians.</p>
+												Kardashians.</p> */}
 										</div>
 										<div className="list-contact-us">
 											<div className="inner">

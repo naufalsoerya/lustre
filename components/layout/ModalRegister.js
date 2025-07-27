@@ -6,6 +6,8 @@ export default function ModalRegister({ isRegister, handleRegister, handleLogin 
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
+	const [address, setAddress] = useState("");
+	const [phone, setPhone] = useState("");
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -24,7 +26,7 @@ export default function ModalRegister({ isRegister, handleRegister, handleLogin 
 			const res = await fetch(process.env.NEXT_PUBLIC_BASE_URL + "/api/register", {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({ username, email, password }),
+				body: JSON.stringify({ username, email, password, phone, address }),
 			});
 
 			const data = await res.json();
@@ -34,6 +36,8 @@ export default function ModalRegister({ isRegister, handleRegister, handleLogin 
 				setEmail("");
 				setPassword("");
 				setConfirmPassword("");
+				setPhone("");
+				setAddress("");
 
 				toast.success("Register Successful", {
 					position: "top-right",
@@ -83,6 +87,28 @@ export default function ModalRegister({ isRegister, handleRegister, handleLogin 
 											required
 											value={username}
 											onChange={(e) => setUsername(e.target.value)}
+										/>
+									</div>
+									<div className="form-group">
+										<label htmlFor="email">Phone Number:</label>
+										<input
+											type="number"
+											id="phone"
+											placeholder="Phone Number"
+											required
+											value={phone}
+											onChange={(e) => setPhone(e.target.value)}
+										/>
+									</div>
+									<div className="form-group">
+										<label htmlFor="email">Full Address (For Shipping Purpose):</label>
+										<input
+											type="text"
+											id="address"
+											placeholder="Full Address"
+											required
+											value={address}
+											onChange={(e) => setAddress(e.target.value)}
 										/>
 									</div>
 									<div className="form-group">

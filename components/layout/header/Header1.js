@@ -3,10 +3,13 @@ import Link from "next/link"
 import { useEffect, useState } from "react"
 import Menu from "../Menu"
 import { toast } from "react-toastify"
+import emailjs from '@emailjs/browser';
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isCart, handleCart, isLogin, handleLogin, handleLogout, isRegister, handleRegister, isForgotPass, handleForgotPass, handleUserInfo }) {
 	const [token, setToken] = useState('')
 	const [username, setUsername] = useState('')
+	const [email, setEmail] = useState('')
+	const [address, setAddress] = useState('')
 	const [userId, setUserId] = useState('');
 	const [cart, setCart] = useState([]);
 	const [totalPrice, setTotalPrice] = useState(0);
@@ -15,6 +18,8 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isCart
 		setToken(localStorage.getItem("token"));
 		setUsername(localStorage.getItem("username"));
 		setUserId(localStorage.getItem("id"));
+		setEmail(localStorage.getItem("email"))
+		setAddress(localStorage.getItem("address"))
 	}, []);
 	  
 	useEffect(() => {
@@ -44,6 +49,20 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isCart
 			fetchData();
 		}
 	}, [userId]); 
+
+	useEffect(() => {
+		if (!document.querySelector('script[src="https://app.sandbox.midtrans.com/snap/snap.js"]')) {
+			const script = document.createElement('script');
+			script.src = "https://app.sandbox.midtrans.com/snap/snap.js";
+			script.setAttribute('data-client-key', process.env.NEXT_PUBLIC_CLIENT);
+			script.async = true;
+
+			script.onload = () => console.log("✅ Midtrans Snap loaded");
+			script.onerror = () => console.error("❌ Gagal load Midtrans Snap");
+
+			document.body.appendChild(script);
+		}
+	}, []);
 
 	const handleRemove = async (e, productId, userId) => {
 		e.preventDefault();
@@ -112,10 +131,15 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isCart
 				body: JSON.stringify({ orderId, totalPrice }),
 			});
 			const token = await tokenizer.json();
+
+			if (!window.snap) {
+				toast.info("Midtrans Snap belum siap, silakan reload halaman.");
+				return;
+			}
+
 			window.snap.pay(token.token, {
 				onSuccess: async function (result) {
 					try {
-						console.log(orderId, userId)
 						await fetch(process.env.NEXT_PUBLIC_BASE_URL + "/api/payment", {
 							method: "POST", 
 							headers: {
@@ -123,6 +147,30 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isCart
 							},
 							body: JSON.stringify({ orderId, userId: parseInt(userId, 10) }),
 						});
+
+						if (res.ok) {
+							emailjs.send(
+								process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,  
+								process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,  
+								{
+									to_email: email,
+									to_name: username,
+									user_address: address,
+									order_id: orderId,
+									total_price: totalPrice
+								},
+								{
+									publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY 
+								}
+							)
+
+							toast.success("Payment Success!", {
+								position: "top-left",
+							});
+							setTimeout(() => window.location.reload(), 3000);
+						} else {
+							toast.info("Payment Canceled");
+						}
 					} catch (err) {
 						console.error("Failed to update payment status", err);
 					}

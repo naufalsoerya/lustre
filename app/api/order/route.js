@@ -21,6 +21,14 @@ export async function POST(request) {
           totalPrice: totalPrice
         },
       });
+    } else {
+      newOrder = await prisma.order.create({
+        data: {
+          userId,
+          status: true,
+          totalPrice,
+        },
+      });
     }
 
     return Response.json({ orderId: newOrder ? newOrder.orderId : isExistedOrder.orderId, isExisted: false  }, { status: 200 });

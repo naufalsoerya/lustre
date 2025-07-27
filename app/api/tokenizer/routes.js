@@ -1,16 +1,15 @@
 import Midtrans from "midtrans-client";
 
 let snap = new Midtrans.Snap({
-    isProduction: false,
-    serverKey: process.env.NEXT_PUBLIC_SERVER,
-    clientKey: process.env.NEXT_PUBLIC_CLIENT
+  isProduction: true,
+  serverKey: process.env.NEXT_PUBLIC_SERVER,
+  clientKey: process.env.NEXT_PUBLIC_CLIENT
 })
 
 export async function POST(request) {
   try {
     const body = await request.json();
     const { orderId, totalPrice } = body;
-    console.log(body, "ini body <<<<")
 
     let parameter = {
         "transaction_details": {

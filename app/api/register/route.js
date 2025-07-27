@@ -4,7 +4,7 @@ import bcrypt from "bcrypt";
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { username, email, password } = body;
+    const { username, email, password, phone, address } = body;
 
     const existing = await prisma.user.findFirst({
       where: {
@@ -23,6 +23,8 @@ export async function POST(request) {
         username,
         email,
         password: hashed,
+        phone, 
+        address
       },
     });
 

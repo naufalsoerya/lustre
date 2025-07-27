@@ -1,5 +1,4 @@
 "use client"
-import { useEffect } from "react"
 import Layout from "../components/layout/Layout"
 import About1 from "../components/sections/About1"
 import Banner from "../components/sections/Banner"
@@ -13,22 +12,6 @@ import Slider1 from "../components/sections/Slider1"
 import Team1 from "../components/sections/Team1"
 import Testimonial1 from "../components/sections/Testimonial1"
 export default function Home() {
-
-	useEffect(() => {
-		const snapScript = "https://app.sandbox.midtrans.com/snap/snap.js";
-		const clientKey = process.env.NEXT_PUBLIC_CLIENT;
-
-		const script = document.createElement('script');
-		script.src = snapScript;
-		script.setAttribute('data-client-key', clientKey);
-		script.async = true;
-
-		document.body.appendChild(script);
-
-		return () => {
-			document.body.removeChild(script);
-		}
-	}, []);
 
 	return (
 		<>

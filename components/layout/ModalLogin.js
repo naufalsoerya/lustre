@@ -38,6 +38,8 @@ export default function ModalLogin({ isLogin, handleLogin, handleRegister, handl
 						const userInfo = {
 							token: data.token,
 							username: data.userInfo.username,
+							phone: data.userInfo.phone, 
+							address: data.userInfo.address,
 							email: data.userInfo.email,
 							id: data.userInfo.id,
 						};

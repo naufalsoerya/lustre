@@ -10,6 +10,7 @@
         "sass": "sass --watch public/assets/scss/main.scss:public/assets/css/main.css"
     },
     "dependencies": {
+        "@emailjs/browser": "^4.4.1",
         "@prisma/client": "^6.6.0",
         "@reduxjs/toolkit": "^2.7.0",
         "bcrypt": "^5.1.1",

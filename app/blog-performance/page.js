@@ -33,10 +33,10 @@ export default function Blog() {
 												{/* /.entry-meta */}
 											</div>{/* /.main-post */}
 										</article>
-										<article className="entry format-standard wow fadeInUp animated">
+										{/* <article className="entry format-standard wow fadeInUp animated">
 											<div className="feature-post">
 												<img src="images/blog/blog2.jpg" alt="image" />
-											</div>{/* /.feature-post */}
+											</div>
 											<div className="main-post">
 												<div className="tag">
 													<ul>
@@ -51,8 +51,7 @@ export default function Blog() {
 												</h2>
 												<div className="entry-meta"></div>
 												<Link className="more-link" href="/blog-single">Read More</Link>
-												{/* /.entry-meta */}
-											</div>{/* /.main-post */}
+											</div>
 										</article>
 										<div className="blog-pagination wow fadeInUp animated">
 											<ul className="flat-pagination clearfix">
@@ -60,7 +59,7 @@ export default function Blog() {
 												<li className="active">2</li>
 												<li><Link href="/#"><i className="icon-Arrow---Right-2" /></Link></li>
 											</ul>
-										</div>{/* /.blog-pagination */}
+										</div> */}
 									</div>
 								</div>{/* /.col-md-9 */}
 								<div className="col-md-12 col-lg-3 col-xl-3 col-xxl-3">

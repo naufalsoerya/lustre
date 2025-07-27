@@ -1,7 +1,7 @@
 import Midtrans from "midtrans-client";
 
 let snap = new Midtrans.Snap({
-    isProduction: false,
+    isProduction: true,
     serverKey: process.env.NEXT_PUBLIC_SERVER,
     clientKey: process.env.NEXT_PUBLIC_CLIENT
 })

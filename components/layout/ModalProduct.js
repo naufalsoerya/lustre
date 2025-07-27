@@ -39,9 +39,10 @@ export default function ModalProduct({ product, onClose }) {
                 },
                 body: JSON.stringify({ productId, userId: parseInt(userId, 10) }),
             });
+            const data = await res.json();
 
             if (res.ok) {
-                toast.success("Item added to cart!", {
+                toast.success(data.message || "Item added to cart!", {
                     position: "top-right",
                     autoClose: 1000,
                     closeOnClick: true,
@@ -51,7 +52,7 @@ export default function ModalProduct({ product, onClose }) {
                     window.location.reload();
                 }, 1000);
             } else {
-                toast.error(res.message || "Please select size first!", {
+                toast.info(data.message || "Please select size first!", {
                     position: "top-right",
                     autoClose: 1500,
                     closeOnClick: true,

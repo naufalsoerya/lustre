@@ -12,7 +12,7 @@ export async function POST(request) {
     });
 
     if (product.stock < 1) {
-      return Response.json({ message: "Product sold out" }, { status: 400 });
+      return Response.json({ message: "This product size is out of stock" }, { status: 400 });
     }
 
     const existedCart = await prisma.cart.findFirst({

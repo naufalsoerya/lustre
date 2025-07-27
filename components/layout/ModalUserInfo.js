@@ -4,10 +4,12 @@ import { toast } from "react-toastify";
 export default function ModalUserinfo({ isUserInfo, handleUserInfo }) {
 	const [username, setUsername] = useState(null)
     const [email, setEmail] = useState(null)
+    const [address, setAddress] = useState(null)
 
 	useEffect(()=>{
 		setEmail(localStorage.getItem("email"))
 		setUsername(localStorage.getItem("username"))
+        setAddress(localStorage.getItem("address"))
 	} , [])
 
     const handleSubmit = async (e) => {
@@ -52,6 +54,9 @@ export default function ModalUserinfo({ isUserInfo, handleUserInfo }) {
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="email">Email: {email}</label>
+                                    </div>
+                                    <div className="form-group">
+                                        <label htmlFor="address">Full Address: {address}</label>
                                     </div>
                                 </div>   
                                 <button type="submit" className="flat-button">Logout</button>

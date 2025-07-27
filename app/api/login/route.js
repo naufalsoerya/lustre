@@ -38,7 +38,9 @@ export async function POST(req) {
     const userInfo = {
       username : user.username,
       email : user.email,
-      id : user.userId
+      id : user.userId,
+      phone : user.phone,
+      address : user.address
     };
 
     return Response.json({ token, userInfo }, { status: 200 });
