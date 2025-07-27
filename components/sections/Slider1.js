@@ -27,16 +27,16 @@ export default function Slider1() {
 						<div className="themeflat-container">
 							<div className="slide-item">
 								<div className="silde-content">
-									<span className="flat-sub-slider">SALE UP TO 50% OFF!</span>
+									<span className="flat-sub-slider d-none">SALE UP TO 50% OFF!</span>
 									<h1 className="flat-title-slider">Empowering Your Fitness Journey
 									</h1>
 									<p className="flat-description-slider">The platform that turns aspirations into
 										accomplishments. Join now and unleash your potential in the world of fitness and
 										wellness.
 									</p>
-									<div className="button">
+									{/* <div className="button">
 										<Link href="/contact" className="flat-button">Join our club</Link>
-									</div>
+									</div> */}
 								</div>
 								{/* <div className="box-events-slide">
 									<span className="new-event">new Event </span>

@@ -31,16 +31,16 @@ export default function Menu() {
 					<ul className="submenu">
 						<li className={`item ${checkCurrentMenuItem("/event-mens")}`}><Link href="/event-mens">Mens</Link></li>
 						<li className={`item ${checkCurrentMenuItem("/event-womans")}`}><Link href="/event-womans">Womans</Link></li>
-						<li className={`item ${checkCurrentMenuItem("/event-accessories")}`}><Link href="/event-accessories">Accessories</Link></li>
+						{/* <li className={`item ${checkCurrentMenuItem("/event-accessories")}`}><Link href="/event-accessories">Accessories</Link></li> */}
 						{/* <li className={`item ${checkCurrentMenuItem("/event-details")}`}><Link href="/event-details">Events Details</Link></li> */}
 					</ul>
 				</li>
 				<li className={`${checkParentActive(["/blog-performance", "/blog-wellness", "/blog-single"])}`}>
-					<Link href="/#">Articles</Link>
-					<ul className="submenu">
+					<Link href="/blog-performance">Articles</Link>
+					{/* <ul className="submenu">
 						<li className={`item ${checkCurrentMenuItem("/blog-performance")}`}><Link href="/blog-performance">Performance</Link></li>
 						<li className={`item ${checkCurrentMenuItem("/blog-wellness")}`}><Link href="/blog-wellness">Wellness</Link></li>
-					</ul>{/* /.submenu */}
+					</ul> */}
 				</li>
 				<li className={`item ${pathname === "/about" ? "current-menu-item" : ""}`}><Link href="/about">About us</Link></li>
 				<li className={`item ${pathname === "/contact" ? "current-menu-item" : ""}`}><Link href="/contact">Contact us</Link></li>

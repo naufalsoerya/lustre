@@ -1,7 +1,4 @@
 {
   "/page": "app/page.js",
-  "/blog-single/page": "app/blog-single/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/event-details/page": "app/event-details/page.js",
-  "/blog/page": "app/blog/page.js"
+  "/event-mens/page": "app/event-mens/page.js"
 }

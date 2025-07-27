@@ -159,14 +159,6 @@ export default function Testimonial1() {
 												<div className="owl-next h1n">next</div>
 											</div>
 										</div>
-										{/* <div className="nav">
-										<div className="prev h1p">
-											<span>‹</span>
-										</div>
-										<div className="next h1n">
-										<span>›</span>
-										</div>
-										</div> */}
 									</Swiper>
 
 								</div>

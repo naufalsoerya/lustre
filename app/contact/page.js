@@ -1,5 +1,5 @@
 
-import Layout from "@/components/layout/Layout"
+import Layout from "../../components/layout/Layout"
 import Link from "next/link"
 export default function Contact() {
 
@@ -8,24 +8,6 @@ export default function Contact() {
 
 			<Layout headerStyle={1} footerStyle={1} breadcrumbTitle="title">
 				<div>
-					<div className="page-title page-title-blog">
-						<div className="themeflat-container">
-							<div className="row">
-								<div className="col-md-12">
-									<div className="page-title-heading">
-										<h1 className="title">Contact Us</h1>
-									</div>{/* /.page-title-captions */}
-									<div className="breadcrumbs">
-										<ul>
-											<li><Link href="/">Homepage</Link></li>
-											<li><i className="icon-Arrow---Right-2" /></li>
-											<li><a>Contact Us</a></li>
-										</ul>
-									</div>{/* /.breadcrumbs */}
-								</div>{/* /.col-md-12 */}
-							</div>{/* /.row */}
-						</div>{/* /.container */}
-					</div>{/* /.page-title */}
 					{/* Map Contact us */}
 					{/* <div className="map-contact-us">
 						<div className="map-contact relative">

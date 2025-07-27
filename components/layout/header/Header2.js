@@ -1,5 +1,5 @@
 'use client'
-import CartExpirationTimer from "@/components/elements/CartExpirationTimer"
+import CartExpirationTimer from "../../../components/elements/CartExpirationTimer"
 import Link from "next/link"
 import { useState } from "react"
 import Menu from "../Menu"

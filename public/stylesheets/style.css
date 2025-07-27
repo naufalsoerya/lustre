@@ -390,7 +390,7 @@ h5,
 h6 {
 	color: var(--black);
 	font-weight: 600;
-	margin: 0 0 30px;
+	margin: 0 0 10px;
 }
 
 button {
@@ -627,9 +627,12 @@ input[type="color"],
 	color: #202020;
 }
 
-.header-inner .header-right ul,
 .header-inner .header-right .btn-menu-active {
 	float: right;
+}
+
+.header-inner .header-right ul {
+	float: unset;
 }
 
 .header-inner .header-right .btn-menu-active a {
@@ -682,13 +685,20 @@ input[type="color"],
 	cursor: pointer;
 }
 
+/* modal pop up */
+.swal-override-zindex {
+  z-index: 1000001 !important;
+  position: relative;
+}
+
 /* Header Fix */
 #header.downscrolled {
 	position: fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
-	z-index: 9989;
+	/* z-index: 9989; */
+	z-index: 1030;
 	transition: background ease 0.3s;
 }
 
@@ -697,7 +707,8 @@ input[type="color"],
 	top: 0;
 	max-width: 100%;
 	margin: 0 auto;
-	z-index: 999999;
+	/* z-index: 999999; */
+	z-index: 1030;
 }
 
 .home-boxed #header.downscrolled,

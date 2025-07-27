@@ -1,7 +1,6 @@
 
 'use client'
 import { useEffect, useState } from "react"
-import AddClassBody from "../elements/AddClassBody"
 import BackToTop from '../elements/BackToTop'
 import Footer1 from './footer/Footer1'
 import Footer2 from './footer/Footer2'
@@ -11,6 +10,8 @@ import MobileMenu from './MobileMenu'
 import ModalForgotPassword from "./ModalForgotPassword"
 import ModalLogin from "./ModalLogin"
 import ModalRegister from "./ModalRegister"
+import ModalUserinfo from "./ModalUserInfo"
+import { ToastContainer } from "react-toastify"
 
 export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, children }) {
 	const [scroll, setScroll] = useState(0)
@@ -38,6 +39,16 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
 		setForgotPass(!isForgotPass)
 		!isForgotPass ? document.body.classList.add("modal-open") : document.body.classList.remove("modal-open")
 	}
+	const [isUserInfo, setUserInfo] = useState(false)
+	const handleUserInfo = () => {
+		setUserInfo(!isUserInfo)
+		!isUserInfo ? document.body.classList.add("modal-open") : document.body.classList.remove("modal-open")
+	}
+	const [isProduct, setProducts] = useState(false)
+	const handleProduct = () => {
+		setProducts(!isProduct)
+		!isProduct ? document.body.classList.add("modal-open") : document.body.classList.remove("modal-open")
+	}
 
 	useEffect(() => {
 		const WOW = require('wowjs')
@@ -64,6 +75,7 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
 				handleCart={handleCart}
 				isLogin={isLogin}
 				handleLogin={handleLogin}
+				handleUserInfo={handleUserInfo}
 				isRegister={isRegister}
 				handleRegister={handleRegister}
 				isForgotPass={isForgotPass}
@@ -77,6 +89,7 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
 				handleCart={handleCart}
 				isLogin={isLogin}
 				handleLogin={handleLogin}
+				handleUserInfo={handleUserInfo}
 				isRegister={isRegister}
 				handleRegister={handleRegister}
 				isForgotPass={isForgotPass}
@@ -91,6 +104,7 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
 				handleCart={handleCart}
 				isLogin={isLogin}
 				handleLogin={handleLogin}
+				handleUserInfo={handleUserInfo}
 				isRegister={isRegister}
 				handleRegister={handleRegister}
 				isForgotPass={isForgotPass}
@@ -127,6 +141,11 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
 				isLogin={isLogin}
 				handleLogin={handleLogin}
 			/>
+			<ModalUserinfo
+				isUserInfo={isUserInfo}
+				handleUserInfo={handleUserInfo}
+			/>
+			<ToastContainer/>
 		</>
 	)
 }
