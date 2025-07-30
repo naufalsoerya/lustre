@@ -42,7 +42,6 @@ export default function Menu() {
 						<li className={`item ${checkCurrentMenuItem("/blog-wellness")}`}><Link href="/blog-wellness">Wellness</Link></li>
 					</ul> */}
 				</li>
-				<li className={`item ${pathname === "/about" ? "current-menu-item" : ""}`}><Link href="/about">About us</Link></li>
 				<li className={`item ${pathname === "/contact" ? "current-menu-item" : ""}`}><Link href="/contact">Contact us</Link></li>
 			</ul>{/* /.menu */}
 		</>

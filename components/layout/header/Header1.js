@@ -6,10 +6,11 @@ import { toast } from "react-toastify"
 import emailjs from '@emailjs/browser';
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isCart, handleCart, isLogin, handleLogin, handleLogout, isRegister, handleRegister, isForgotPass, handleForgotPass, handleUserInfo }) {
-	const [token, setToken] = useState('')
-	const [username, setUsername] = useState('')
-	const [email, setEmail] = useState('')
-	const [address, setAddress] = useState('')
+	const [token, setToken] = useState('');
+	const [username, setUsername] = useState('');
+	const [email, setEmail] = useState('');
+	const [phone, setPhone] = useState('');
+	const [address, setAddress] = useState('');
 	const [userId, setUserId] = useState('');
 	const [cart, setCart] = useState([]);
 	const [totalPrice, setTotalPrice] = useState(0);
@@ -18,8 +19,9 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isCart
 		setToken(localStorage.getItem("token"));
 		setUsername(localStorage.getItem("username"));
 		setUserId(localStorage.getItem("id"));
-		setEmail(localStorage.getItem("email"))
-		setAddress(localStorage.getItem("address"))
+		setEmail(localStorage.getItem("email"));
+		setPhone(localStorage.getItem("phone"));
+		setAddress(localStorage.getItem("address"));
 	}, []);
 	  
 	useEffect(() => {
@@ -50,10 +52,11 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isCart
 		}
 	}, [userId]); 
 
+	
 	useEffect(() => {
-		if (!document.querySelector('script[src="https://app.sandbox.midtrans.com/snap/snap.js"]')) {
+		if (!document.querySelector('script[src="https://app.midtrans.com/snap/snap.js"]')) {
 			const script = document.createElement('script');
-			script.src = "https://app.sandbox.midtrans.com/snap/snap.js";
+			script.src = "https://app.midtrans.com/snap/snap.js";
 			script.setAttribute('data-client-key', process.env.NEXT_PUBLIC_CLIENT);
 			script.async = true;
 
@@ -156,6 +159,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isCart
 									to_email: email,
 									to_name: username,
 									user_address: address,
+									user_phone: phone,
 									order_id: orderId,
 									total_price: totalPrice
 								},

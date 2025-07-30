@@ -9,6 +9,7 @@ export default function Header2({ scroll, isMobileMenu, handleMobileMenu, isCart
 	const handleTab = (i) => {
 		setIsTab(i)
 	}
+	
 	return (
 		<>
 

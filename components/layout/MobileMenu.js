@@ -30,6 +30,7 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
 				<ul className="menu">
 					<li className={`${checkParentActive(["/homev2", "/homev3"])}`}>
 						<Link href="/">Home page</Link>
+
 						{/* <span className="btn-submenu" onClick={() => handleAccordion(1)} />
 						<ul className="submenu" style={{ display: `${isAccordion === 1 ? "block" : "none"}` }}>
 							<li className={`item ${checkCurrentMenuItem("/")}`}><Link href="/">Home V.1</Link></li>
@@ -38,21 +39,21 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }) {
 						</ul> */}
 					</li>
 					<li className={`item ${pathname === "/about" ? "current-menu-item" : ""}`}><Link href="/about">About us</Link></li>
-					<li className={`${checkParentActive(["/event", "/event-details"])}`}>
-						<Link href="/#">Our Events</Link>
-						<span className="btn-submenu" onClick={() => handleAccordion(2)} />
-						<ul className="submenu" style={{ display: `${isAccordion === 2 ? "block" : "none"}` }}>
-							<li className={`item ${checkCurrentMenuItem("/event")}`}><Link href="/event">Events</Link></li>
-							<li className={`item ${checkCurrentMenuItem("/event-details")}`}><Link href="/event-details">Events Details</Link></li>
-						</ul>{/* /.submenu */}
+					<li className={`${checkParentActive(["/event-mens", "/event-womans", "/event-accessories", "/event-details"])}`}>
+						<Link href="/#">Shop</Link>
+						<ul className="submenu">
+							<li className={`item ${checkCurrentMenuItem("/event-mens")}`}><Link href="/event-mens">Mens</Link></li>
+							<li className={`item ${checkCurrentMenuItem("/event-womans")}`}><Link href="/event-womans">Womans</Link></li>
+							{/* <li className={`item ${checkCurrentMenuItem("/event-accessories")}`}><Link href="/event-accessories">Accessories</Link></li> */}
+							{/* <li className={`item ${checkCurrentMenuItem("/event-details")}`}><Link href="/event-details">Events Details</Link></li> */}
+						</ul>
 					</li>
-					<li className={`${checkParentActive(["/blog", "/blog-single"])}`}>
-						<Link href="/#">Latest News</Link>
-						<span className="btn-submenu" onClick={() => handleAccordion(3)} />
-						<ul className="submenu" style={{ display: `${isAccordion === 3 ? "block" : "none"}` }}>
-							<li className={`item ${checkCurrentMenuItem("/blog")}`}><Link href="/blog">Blogs</Link></li>
-							<li className={`item ${checkCurrentMenuItem("/blog-single")}`}><Link href="/blog-single">Blogs Single</Link></li>
-						</ul>{/* /.submenu */}
+					<li className={`${checkParentActive(["/blog-performance", "/blog-wellness", "/blog-single"])}`}>
+						<Link href="/blog-performance">Articles</Link>
+						{/* <ul className="submenu">
+							<li className={`item ${checkCurrentMenuItem("/blog-performance")}`}><Link href="/blog-performance">Performance</Link></li>
+							<li className={`item ${checkCurrentMenuItem("/blog-wellness")}`}><Link href="/blog-wellness">Wellness</Link></li>
+						</ul> */}
 					</li>
 					<li className={`item ${pathname === "/contact" ? "current-menu-item" : ""}`}><Link href="/contact">Contact us</Link></li>
 				</ul>{/* /.menu */}
