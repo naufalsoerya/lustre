@@ -1,8 +1,6 @@
 'use client'
 import { useState } from "react";
-import CountUp from 'react-countup'
 import Layout from "../../components/layout/Layout"
-import Link from "next/link"
 export default function About() {
 	const [isTab, setIsTab] = useState(1)
     const handleTab = (i) => {
