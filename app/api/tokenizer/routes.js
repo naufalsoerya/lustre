@@ -1,4 +1,5 @@
 import Midtrans from "midtrans-client";
+export const dynamic = 'force-dynamic';
 
 let snap = new Midtrans.Snap({
   isProduction: true,
