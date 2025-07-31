@@ -8,46 +8,42 @@ datasource db {
 }
 
 model User {
-  userId     Int       @id @default(autoincrement())
-  username   String    @unique
-  email      String    @unique
-  password   String
-  phone      String    @default("")
-  address    String    @default("")
-  role       String    @default("user")
-  isDeleted  Boolean   @default(false)
-  deletedAt  DateTime?
-  cTime      DateTime  @default(now())
-
-  // Relasi
-  carts      Cart[]
-  orders     Order[]
-  payments   Payment[]
+  userId    Int       @id @default(autoincrement())
+  username  String    @unique
+  email     String    @unique
+  password  String
+  role      String    @default("user")
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  cTime     DateTime  @default(now())
+  address   String    @default("")
+  phone     String    @default("")
+  carts     Cart[]
+  orders    Order[]
+  payments  Payment[]
 
   @@map("User")
 }
 
 model Product {
-  productId   Int       @id @default(autoincrement())
+  productId   Int         @id @default(autoincrement())
   name        String
+  urlPhoto    String      @default("")
   description String
-  isDeleted   Boolean   @default(false)
+  isDeleted   Boolean     @default(false)
   deletedAt   DateTime?
   stock       Int
   materials   String
   price       Int
-  cTime       DateTime  @default(now())
-  categories  String    
-  size        String    @default("")
-  parentId    Int   
-  urlPhoto    String    @default("")
-  urlPhoto2   String    @default("")
-  urlPhoto3   String    @default("")
-  urlPhoto4   String    @default("")
-  urlPhoto5   String    @default("")
-  urlHeadline String    @default("")
-
-  // Relasi
+  cTime       DateTime    @default(now())
+  categories  String
+  size        String      @default("")
+  parentId    Int
+  urlPhoto2   String      @default("")
+  urlPhoto3   String      @default("")
+  urlPhoto4   String      @default("")
+  urlPhoto5   String      @default("")
+  urlHeadline String      @default("")
   carts       Cart[]
   orders      OrderItem[]
 
@@ -56,32 +52,28 @@ model Product {
 }
 
 model Cart {
-  cartId     Int       @id @default(autoincrement())
-  userId     Int
-  productId  Int
-  quantity   Int      
-  addedAt    DateTime  @default(now())
-  deletedAt  DateTime?
-
-  // Relasi
-  user       User      @relation(fields: [userId], references: [userId])
-  product    Product   @relation(fields: [productId], references: [productId])
+  cartId    Int       @id @default(autoincrement())
+  userId    Int
+  productId Int
+  quantity  Int
+  addedAt   DateTime  @default(now())
+  deletedAt DateTime?
+  product   Product   @relation(fields: [productId], references: [productId])
+  user      User      @relation(fields: [userId], references: [userId])
 
   @@index([userId, productId])
   @@map("Cart")
 }
 
 model Order {
-  orderId     Int         @id @default(autoincrement())
-  userId      Int
-  status      Boolean
-  totalPrice  Int
-  createdAt   DateTime    @default(now())
-
-  // Relasi
-  user        User        @relation(fields: [userId], references: [userId])
-  orderItems  OrderItem[]
-  payment     Payment?
+  orderId    Int         @id @default(autoincrement())
+  userId     Int
+  totalPrice Int
+  createdAt  DateTime    @default(now())
+  status     Boolean
+  user       User        @relation(fields: [userId], references: [userId])
+  orderItems OrderItem[]
+  payment    Payment?
 
   @@index([userId])
   @@index([status])
@@ -89,28 +81,24 @@ model Order {
 }
 
 model OrderItem {
-  orderItemId Int       @id @default(autoincrement())
+  orderItemId Int     @id @default(autoincrement())
   orderId     Int
   productId   Int
   quantity    Int
-
-  // Relasi
-  order       Order     @relation(fields: [orderId], references: [orderId])
-  product     Product   @relation(fields: [productId], references: [productId])
+  order       Order   @relation(fields: [orderId], references: [orderId])
+  product     Product @relation(fields: [productId], references: [productId])
 
   @@map("OrderItem")
 }
 
 model Payment {
-  paymentId   Int       @id @default(autoincrement())
-  orderId     Int       @unique
-  userId      Int
-  status      Boolean
-  paidAt      DateTime  @default(now())
-
-  // Relasi
-  order       Order     @relation(fields: [orderId], references: [orderId])
-  user        User      @relation(fields: [userId], references: [userId])
+  paymentId Int      @id @default(autoincrement())
+  orderId   Int      @unique
+  userId    Int
+  paidAt    DateTime @default(now())
+  status    Boolean
+  order     Order    @relation(fields: [orderId], references: [orderId])
+  user      User     @relation(fields: [userId], references: [userId])
 
   @@index([userId])
   @@index([status])
