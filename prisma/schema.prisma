@@ -45,6 +45,7 @@ model Product {
   urlPhoto3   String    @default("")
   urlPhoto4   String    @default("")
   urlPhoto5   String    @default("")
+  urlHeadline String    @default("")
 
   // Relasi
   carts       Cart[]

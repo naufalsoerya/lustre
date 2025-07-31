@@ -39,7 +39,7 @@ export default function Event() {
 												<p>{product.description}</p>
 												<p>{product.materials}</p>
 											</div>
-											<img decoding="async" src="https://healthmaxphysio.com/wp-content/uploads/2016/07/running-track.jpg" alt={product.name} />
+											<img decoding="async" src={product.urlHeadline} alt={product.name} />
 										</div>
 										<div className="tf-info-price">
 											<h4>Price</h4>
