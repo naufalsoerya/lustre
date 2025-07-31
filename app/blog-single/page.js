@@ -8,25 +8,7 @@ export default function BlogSingle() {
 
 			<Layout headerStyle={1} footerStyle={1} breadcrumbTitle="title">
 				<div>
-					<div className="page-title page-title-blog text-left">
-						<div className="themeflat-container">
-							<div className="row">
-								<div className="col-md-12">
-									<div className="page-title-heading">
-										<h1 className="title">Articles detail</h1>
-									</div>{/* /.page-title-captions */}
-									<div className="breadcrumbs">
-										<ul>
-											<li><Link href="/">Articles</Link></li>
-											<li> <i className="icon-Arrow---Right-2" /></li>
-											<li><a>First drop article: inspired by the still mind</a></li>
-										</ul>
-									</div>{/* /.breadcrumbs */}
-								</div>{/* /.col-md-12 */}
-							</div>{/* /.row */}
-						</div>{/* /.container */}
-					</div>{/* /.page-title */}
-					{/* Blog Posts */}
+					
 					<section className="main-content blog-content-single">
 						<div className="themeflat-container">
 							<div className="row">
