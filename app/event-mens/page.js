@@ -26,10 +26,8 @@ export default function Event() {
 		<>
 			<Layout headerStyle={1} footerStyle={1} breadcrumbTitle="title">
 				<div>
-					
-					<div className="tf-widget-events">
+					{/* <div className="tf-widget-events">
 						<div className="themeflat-container">
-							
 							<div className="widget-event">
 								{products.map((product, index) => (
 									<div className="item wow fadeInUp animated" key={index}>
@@ -61,9 +59,36 @@ export default function Event() {
 								))}
 							</div>
 						</div>
-					</div>
-					<div className="tf-widget-form-contact form-contact-v2">
+					</div> */}
+
+					<div className="tf-widget-course main-content">
 						<div className="themeflat-container">
+							<div className="tf-course">
+								<div className="row">
+									{products.map((product, index) => (
+										<div className="col-md-4 course">
+											<div className="course-item-wrap wow fadeInUp animated">
+												<Link href='#' onClick={() => setSelectedProduct(product)}>
+													<img src={product.urlHeadline} alt="" style={{ width: '450px', height: '400px' }} />
+												</Link>
+												<div className="content-course" style={{ textAlign: 'center' }}>
+													<h5 className="title-course"><Link href='#' onClick={() => setSelectedProduct(product)}>{product.name}</Link></h5>
+													<p className="price">
+														<span>
+															{new Intl.NumberFormat('id-ID', {
+															style: 'currency',
+															currency: 'IDR',
+															minimumFractionDigits: 0,
+															maximumFractionDigits: 0,
+															}).format(product.price)}
+														</span>
+													</p>
+												</div>
+											</div>
+										</div>
+									))}
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

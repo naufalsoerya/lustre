@@ -124,8 +124,16 @@ export default function ModalProduct({ product, onClose }) {
                             ))}
                         </Swiper>
                         <h5>{product.name}</h5>
-                        <p>{product.materials}</p>
-                        <p>Rp {product.price}</p>
+                        <p>{product.description}</p>
+                        <p className="mt-3">Materials: {product.materials}</p>
+                        <p>
+                            {new Intl.NumberFormat('id-ID', {
+                            style: 'currency',
+                            currency: 'IDR',
+                            minimumFractionDigits: 0,
+                            maximumFractionDigits: 0,
+                            }).format(product.price)}
+                        </p>
                         <div className="mt-3 flex-wrap">
                             {productDetail.map((item, index) => (
                                 <div key={index} className="form-check form-check-inline" style={{ minWidth: "80px" }}>
